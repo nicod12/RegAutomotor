@@ -4,7 +4,6 @@ export interface Vehiculo {
   tipo: TipoDeVehiculo;
   marca: string;
   modelo: string;
-  año: number;
+  anio: number;
   patente: string;
 }
-

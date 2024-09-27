@@ -9,7 +9,7 @@ console.log(
   registro.getVehiculos(),
 );
 
-registro.modificarVehiculo("BUH123", { modelo: "Corolla 2020", año: 2020 });
+registro.modificarVehiculo("BUH123", { modelo: "Corolla 2020", anio: 2020 });
 
 console.log("registro de vehiculo actualizado", registro.getVehiculos());
 

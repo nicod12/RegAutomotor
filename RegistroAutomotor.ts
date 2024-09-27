@@ -1,8 +1,7 @@
-import { TipoDeVehiculo, Vehiculo } from "./Vehiculos";
+import { TipoDeVehiculo, Vehiculo } from "./vehiculos";
 
 export class RegistroAutomotor {
-  private vehiculos: Vehiculo[] = [];
-
+  constructor(private vehiculos: Vehiculo[] = []) {}
   getVehiculos(): Vehiculo[] {
     return this.vehiculos;
   }
@@ -11,10 +10,16 @@ export class RegistroAutomotor {
     tipo: TipoDeVehiculo,
     marca: string,
     modelo: string,
-    año: number,
+    anio: number,
     patente: string,
   ): void {
-    const nuevoVehiculo: Vehiculo = { tipo: tipo, marca, modelo, año, patente };
+    const nuevoVehiculo: Vehiculo = {
+      tipo: tipo,
+      marca,
+      modelo,
+      anio,
+      patente,
+    };
     this.vehiculos.push(nuevoVehiculo);
   }
 
