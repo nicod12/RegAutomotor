@@ -1,6 +1,4 @@
-import { RegistroAutomotor } from "./RegistroAutomotor";
-
-const registro = new RegistroAutomotor();
+import { registro } from "./RegistroAutomotor";
 
 registro.setVehiculo("auto", "toyota", "corolla", 2019, "BUH123");
 registro.setVehiculo("moto", "Yamaha", "MT-09", 2018, "YUY456");

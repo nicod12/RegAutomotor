@@ -35,3 +35,4 @@ export class RegistroAutomotor {
   }
 }
 
+export const registro = new RegistroAutomotor();
