@@ -8,13 +8,13 @@ export class RegistroAutomotor {
   }
 
   setVehiculo(
-    type: TipoDeVehiculo,
+    tipo: TipoDeVehiculo,
     marca: string,
     modelo: string,
     año: number,
     patente: string,
   ): void {
-    const nuevoVehiculo: Vehiculo = { tipo: type, marca, modelo, año, patente };
+    const nuevoVehiculo: Vehiculo = { tipo: tipo, marca, modelo, año, patente };
     this.vehiculos.push(nuevoVehiculo);
   }
 
