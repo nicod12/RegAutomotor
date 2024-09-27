@@ -1,42 +1,34 @@
-import { TipoDeVehiculo, Vehiculo } from "./vehiculos";
+import { Auto } from "./clases/Auto";
+import { Camion } from "./clases/Camion";
+import { Moto } from "./clases/Moto";
 
 export class RegistroAutomotor {
-  constructor(private vehiculos: Vehiculo[] = []) {}
-  getVehiculos(): Vehiculo[] {
-    return this.vehiculos;
+  private autos: Auto[] = [];
+  private motos: Moto[] = [];
+  private camiones: Camion[] = [];
+
+  public agregarAuto(auto: Auto): void {
+    this.autos.push(auto);
   }
 
-  setVehiculo(
-    tipo: TipoDeVehiculo,
-    marca: string,
-    modelo: string,
-    anio: number,
-    patente: string,
-  ): void {
-    const nuevoVehiculo: Vehiculo = {
-      tipo: tipo,
-      marca,
-      modelo,
-      anio,
-      patente,
-    };
-    this.vehiculos.push(nuevoVehiculo);
+  public agregarMoto(moto: Moto): void {
+    this.motos.push(moto);
   }
 
-  modificarVehiculo(
-    patente: string,
-    datosModificados: Partial<Vehiculo>,
-  ): void {
-    const vehiculo = this.vehiculos.find((v) => v.patente === patente);
-    if (vehiculo) {
-      Object.assign(vehiculo, datosModificados);
-    }
+  public agregarCamion(camion: Camion): void {
+    this.camiones.push(camion);
   }
 
-  darDebaja(patente: string): void {
-    this.vehiculos = this.vehiculos.filter(
-      (vehiculo) => vehiculo.patente !== patente,
-    );
+  public obtenerAutos(): Auto[] {
+    return this.autos;
+  }
+
+  public obtenerMotos(): Moto[] {
+    return this.motos;
+  }
+
+  public obtenerCamiones(): Camion[] {
+    return this.camiones;
   }
 }
 
