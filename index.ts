@@ -52,7 +52,12 @@ console.log(
 
 console.log("----------------");
 
-registro.modificarAuto(0, new Auto("GUP203", "Honda", "Civic", 2004));
+registro.modificarAuto(1, {
+  marca: "Ferrari",
+  modelo: "California",
+  anio: 2010,
+});
+
 console.log("Registor de autos: ", registro.obtenerAutos());
 
 console.log("----------------");

@@ -39,21 +39,57 @@ export class RegistroAutomotor {
     }
     return this.camiones;
   }
-  modificarAuto(index: number, auto: Auto): void {
+  modificarAuto(
+    index: number,
+    nuevosDatos: Partial<{
+      marca: string;
+      modelo: string;
+      anio: number;
+      patente: string;
+    }>,
+  ): void {
     if (index >= 0 && index < this.autos.length) {
-      this.autos[index] = auto;
+      const auto = this.autos[index];
+      if (nuevosDatos.patente) auto.setPatente(nuevosDatos.patente);
+      if (nuevosDatos.marca) auto.setMarca(nuevosDatos.marca);
+      if (nuevosDatos.modelo) auto.setModelo(nuevosDatos.modelo);
+      if (nuevosDatos.anio) auto.setAnio(nuevosDatos.anio);
     }
   }
 
-  modificarMoto(index: number, moto: Moto): void {
+  modificarMoto(
+    index: number,
+    nuevosDatos: Partial<{
+      marca: string;
+      modelo: string;
+      anio: number;
+      patente: string;
+    }>,
+  ): void {
     if (index >= 0 && index < this.motos.length) {
-      this.motos[index] = moto;
+      const moto = this.motos[index];
+      if (nuevosDatos.patente) moto.setPatente(nuevosDatos.patente);
+      if (nuevosDatos.marca) moto.setMarca(nuevosDatos.marca);
+      if (nuevosDatos.modelo) moto.setModelo(nuevosDatos.modelo);
+      if (nuevosDatos.anio) moto.setAnio(nuevosDatos.anio);
     }
   }
 
-  modificarCamion(index: number, camion: Camion): void {
+  modificarCamion(
+    index: number,
+    nuevosDatos: Partial<{
+      marca: string;
+      modelo: string;
+      anio: number;
+      patente: string;
+    }>,
+  ): void {
     if (index >= 0 && index < this.camiones.length) {
-      this.camiones[index] = camion;
+      const camion = this.camiones[index];
+      if (nuevosDatos.patente) camion.setPatente(nuevosDatos.patente);
+      if (nuevosDatos.marca) camion.setMarca(nuevosDatos.marca);
+      if (nuevosDatos.modelo) camion.setModelo(nuevosDatos.modelo);
+      if (nuevosDatos.anio) camion.setAnio(nuevosDatos.anio);
     }
   }
 
