@@ -39,13 +39,14 @@ export class RegistroAutomotor {
     }
     return this.camiones;
   }
+
   modificarAuto(
     index: number,
     nuevosDatos: Partial<{
+      patente: string;
       marca: string;
       modelo: string;
       anio: number;
-      patente: string;
     }>,
   ): void {
     if (index >= 0 && index < this.autos.length) {
@@ -60,10 +61,10 @@ export class RegistroAutomotor {
   modificarMoto(
     index: number,
     nuevosDatos: Partial<{
+      patente: string;
       marca: string;
       modelo: string;
       anio: number;
-      patente: string;
     }>,
   ): void {
     if (index >= 0 && index < this.motos.length) {
@@ -78,10 +79,10 @@ export class RegistroAutomotor {
   modificarCamion(
     index: number,
     nuevosDatos: Partial<{
+      patente: string;
       marca: string;
       modelo: string;
       anio: number;
-      patente: string;
     }>,
   ): void {
     if (index >= 0 && index < this.camiones.length) {
