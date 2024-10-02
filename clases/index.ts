@@ -1,3 +1,3 @@
-export { Auto } from "./Auto";
-export { Camion } from "./Camion";
-export { Moto } from "./Moto";
+export { Car } from "./Car";
+export { Truck } from "./Truck";
+export { MotorCycle } from "./MotorCycle";
